@@ -36,7 +36,7 @@ end
     if haskey(o, "__doc__")
         print(io, convert(AbstractString, o["__doc__"]))
     else
-        print(io, "no Python docstring found for ", h.k)
+        print(io, "no Python docstring found for ", o)
     end
 end
 Base.show(io::IO, h::LazyHelp) = @compat show(io, "text/plain", h)
